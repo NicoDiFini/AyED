@@ -14,7 +14,7 @@ int main()
 
     while (abs(4*s-3.141592) >= 0.000001)
     {
-        s=s+signo*(1/(2*i-1));
+        s=s+signo*(1/(2*i+1));
         signo=-signo;
         i++;
     }
