@@ -1,29 +1,30 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
+double calcularPi(int iteraciones) 
+{
+    double suma = 0;
+    int signo = 1;
+    int i = 0
+
+    for (i; i < iteraciones; i++) 
+    {
+        suma = suma + signo * (1/ (2 * i + 1));
+        signo = -signo;
+    }
+
+    return suma * 4;
+}
+
 int main() 
 {
-    double pi,s;
-    int n,i,signo;
+    double numIteraciones = 1000000;
+    cout.precision (7);
     
-    s=0;
-    signo=1;
-    i=1;
-
-    while (abs(4*s-3.141592) >= 0.000001)
-    {
-        s=s+signo*(1/(2*i+1));
-        signo=-signo;
-        i++;
-    }
-    
-    pi = 4*s;
-    n=i-1;
+    double pi = calcularPi(numIteraciones);
 
     cout << "El valor aproximado de pi es: " << pi << endl;
-    cout << "Se realizaron " << n << " iteraciones." << endl;
 
     return 0;
 }
