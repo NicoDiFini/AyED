@@ -2,28 +2,29 @@
 
 using namespace std;
 
-double calcularPi(int iteraciones) 
+double calcularPi(double iteraciones) 
 {
-    double suma = 0;
-    int signo = 1;
-    int i = 0
+  double numerador = 4;
+  double denominador = 1; 
+  double pi = 0;
+  int i = 0;
+  int operador = 1;
 
     for (i; i < iteraciones; i++) 
     {
-        suma = suma + signo * (1/ (2 * i + 1));
-        signo = -signo;
+        pi += operador * (numerador / denominador);
+        denominador += 2;
+        operador *= -1;
     }
 
-    return suma * 4;
+    return pi;
 }
 
 int main() 
 {
-    double numIteraciones = 1000000;
-    cout.precision (7);
-    
-    double pi = calcularPi(numIteraciones);
-
+    double iteraciones = 1000000;
+    double pi = calcularPi(iteraciones);
+    cout.precision (7);  
     cout << "El valor aproximado de pi es: " << pi << endl;
 
     return 0;
