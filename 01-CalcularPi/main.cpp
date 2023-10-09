@@ -10,7 +10,7 @@ double calcularPi(double iteraciones)
   int i = 0;
   int operador = 1;
 
-    for (i; i < iteraciones; i++) 
+    for (; i < iteraciones; i++) 
     {
         pi += operador * (numerador / denominador);
         denominador += 2;
